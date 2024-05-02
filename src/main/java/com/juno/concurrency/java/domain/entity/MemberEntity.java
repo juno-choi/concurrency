@@ -1,6 +1,5 @@
-package com.juno.concurrency.syncronize.domain.entity;
+package com.juno.concurrency.java.domain.entity;
 
-import com.juno.concurrency.syncronize.domain.dto.RequestDto;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -18,6 +17,6 @@ public class MemberEntity {
     private Long memberId;
 
     private String name;
-    private String password;
+    private int number;
 
 }

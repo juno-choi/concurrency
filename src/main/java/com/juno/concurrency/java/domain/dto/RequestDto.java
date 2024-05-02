@@ -1,6 +1,6 @@
-package com.juno.concurrency.syncronize.domain.dto;
+package com.juno.concurrency.java.domain.dto;
 
-import com.juno.concurrency.syncronize.domain.entity.MemberEntity;
+import com.juno.concurrency.java.domain.entity.MemberEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -12,12 +12,12 @@ import lombok.NoArgsConstructor;
 @Builder
 public class RequestDto {
     private String name;
-    private String password;
+    private int number;
 
     public MemberEntity toModel() {
         return MemberEntity.builder()
                 .name(name)
-                .password(password)
+                .number(number)
                 .build();
     }
 }

@@ -12,7 +12,8 @@ spring:
       path: /h2-console
   jpa:
     hibernate:
-      ddl-auto: create-drop  #절대 수정 금지
+#      ddl-auto: create-drop  #절대 수정 금지
+      ddl-auto: create  #절대 수정 금지
       format_sql: true
     show-sql: true
     defer-datasource-initialization: true
@@ -22,6 +23,7 @@ spring:
   datasource:
     hikari:
       driver-class-name: org.h2.Driver
-      jdbc-url: jdbc:h2:mem:concurrency;mode=mysql
+#      jdbc-url: jdbc:h2:mem:concurrency;mode=mysql
+      jdbc-url: jdbc:h2:tcp://localhost/~/concurrency
       username: sa
       password:
