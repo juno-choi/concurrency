@@ -16,7 +16,6 @@ public class MemberEntity {
     @Column(name = "member_id")
     private Long memberId;
 
-    private String name;
     private int number;
 
 }

@@ -11,12 +11,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class RequestDto {
-    private String name;
     private int number;
 
     public MemberEntity toModel() {
         return MemberEntity.builder()
-                .name(name)
                 .number(number)
                 .build();
     }

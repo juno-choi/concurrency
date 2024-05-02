@@ -17,7 +17,7 @@ class NormalServiceTest {
     @Test
     public void testConcurrentReservation() throws InterruptedException {
         int totalThreads = 100;
-        int totalReservationsPerThread = 1;
+        int perThread = 1;
         CountDownLatch latch = new CountDownLatch(totalThreads);
         ExecutorService executorService = Executors.newFixedThreadPool(totalThreads);
 
@@ -25,9 +25,8 @@ class NormalServiceTest {
             final int finalI = i;
             executorService.submit(() -> {
                 try {
-                    for (int j = 0; j < totalReservationsPerThread; j++) {
+                    for (int j = 0; j < perThread; j++) {
                         RequestDto request = RequestDto.builder()
-                                .name("홍길동")
                                 .number(finalI)
                                 .build();
                         normalService.post(request);
