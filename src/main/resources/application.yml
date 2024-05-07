@@ -27,3 +27,7 @@ spring:
       jdbc-url: jdbc:h2:tcp://localhost/~/concurrency
       username: sa
       password:
+  data:
+    redis:
+      host: redis
+      port: 6379
