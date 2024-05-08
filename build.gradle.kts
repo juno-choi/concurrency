@@ -24,6 +24,7 @@ dependencies {
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("io.projectreactor:reactor-test")
+	implementation("org.redisson:redisson-spring-boot-starter:3.21.1")
 }
 
 tasks.withType<Test> {
